@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { ScheduleComponent } from './schedule.component';
 
@@ -20,4 +21,9 @@ describe('ScheduleComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display schedule title', () => {
+    const titleElement = fixture.debugElement.query(By.css('h1'));
+    expect(titleElement.nativeElement.textContent).toBe('Schedule 2024');
+  })
 });
