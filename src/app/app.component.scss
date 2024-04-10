@@ -1,0 +1,14 @@
+@import '../styles/sizes';
+
+.main {
+  max-width: $max-content;
+  margin: $top-space auto;
+  width: $main;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    width: $logo;
+    margin: $regular-margin auto;
+  }
+}
