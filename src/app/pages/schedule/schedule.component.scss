@@ -1,0 +1,13 @@
+@import '../../../styles/colors';
+@import '../../../styles/sizes';
+@import '../../../styles/others';
+
+.schedule {
+  border-radius: $regular-radius;
+  height: $complete-height;
+  max-height: $section-max-height;
+  text-align: center;
+  background-color: $clear-ghost;
+  box-shadow: $regular-shadow;
+  padding-top: $regular-margin;
+}
