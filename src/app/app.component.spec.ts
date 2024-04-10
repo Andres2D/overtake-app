@@ -17,8 +17,9 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should render base title`, () => {
-    const paragraphElement = fixture.debugElement.query(By.css('p')).nativeElement;
-    expect(paragraphElement.textContent).toBe('overtake app works!');
-  });
+  it('should display app logo', () => {
+    const imageElement = fixture.debugElement.query(By.css('.logo'));
+    expect(imageElement.nativeElement.alt).toBe('overtake-app');
+    expect(imageElement).toBeTruthy();
+  })
 });
