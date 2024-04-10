@@ -10,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'overtake-app';
+  
+  constructor() {
+    console.log('This is a test');
+  }
 }
