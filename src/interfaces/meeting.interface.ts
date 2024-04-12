@@ -18,4 +18,4 @@ export interface MeetingMap {
     track: string;
     flag: string;
   }
-};
+}
