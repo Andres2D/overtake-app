@@ -1,0 +1,20 @@
+<div 
+  class="meeting" 
+  [title]="meeting.meeting_official_name | uppercase"
+  (click)="onClickTrack()"
+  (keyup.enter)="onClickTrack()"
+  tabindex="0"
+>
+  <img 
+    class="track"
+    [src]="getTrackById(meeting.circuit_key)" 
+    [alt]="meeting.circuit_short_name | uppercase"
+  />
+  <span class="flag">{{ getFlagById(meeting.circuit_key) }}</span>
+  <div class="information">
+    <h3 class="title">
+      {{ meeting.circuit_short_name | uppercase }} 
+    </h3>
+    <h4 class="subtitle">{{ meeting.date_start | date: 'MMM d' | uppercase }}</h4>
+  </div>
+</div>

@@ -32,7 +32,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "loader": {
+              ".svg": "file"
+            }    
           },
           "configurations": {
             "production": {
