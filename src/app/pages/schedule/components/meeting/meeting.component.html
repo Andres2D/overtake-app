@@ -10,9 +10,11 @@
     [src]="getTrackById(meeting.circuit_key)" 
     [alt]="meeting.circuit_short_name | uppercase"
   />
-  <h3 class="title">
-      {{ meeting.circuit_short_name | uppercase }} 
-      <span>{{ getFlagById(meeting.circuit_key) }}</span>
-  </h3>
-  <h4 class="subtitle">{{ meeting.date_start | date: 'MMM d' | uppercase }}</h4>
+  <span class="flag">{{ getFlagById(meeting.circuit_key) }}</span>
+  <div class="information">
+    <h3 class="title">
+        {{ meeting.circuit_short_name | uppercase }} 
+    </h3>
+    <h4 class="subtitle">{{ meeting.date_start | date: 'MMM d' | uppercase }}</h4>
+  </div>
 </div>

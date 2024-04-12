@@ -1,12 +1,33 @@
+@import '../../../../../styles/sizes';
+@import '../../../../../styles/others';
+
 .meeting {
+  width: $meeting-card-width;
+  height: $meeting-card-height;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: $regular-radius;
+  box-shadow: $card-shadow;
 
   .track {
-    width: 100px;
+    width: $full-width;
+    max-height: $card-height;
+    padding-top: $medium-padding;
   }
 
-  .title,
-  .subtitle {
-    margin: 0;
+  .flag {
+    position: absolute;
+  }
+
+  .information {
+    padding-bottom: $small-padding;
+    
+    .title,
+    .subtitle {
+      margin: $none;
+    }
   }
 }

@@ -2,19 +2,6 @@ import { Meeting } from '../interfaces/meeting.interface';
 
 export const meetingsMock: Meeting[] = [
   {
-    meeting_name: 'Pre-Season Testing',
-    meeting_official_name: 'FORMULA 1 ARAMCO PRE-SEASON TESTING 2023',
-    location: 'Sakhir',
-    country_key: 36,
-    country_code: 'BRN',
-    country_name: 'Bahrain',
-    circuit_key: 63,
-    circuit_short_name: 'Sakhir',
-    date_start: '2023-02-23T07:00:00',
-    meeting_key: 1140,
-    year: 2023,
-  },
-  {
     meeting_name: 'Bahrain Grand Prix',
     meeting_official_name: 'FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2023',
     location: 'Sakhir',
