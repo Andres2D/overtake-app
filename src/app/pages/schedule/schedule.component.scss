@@ -10,4 +10,13 @@
   background-color: $clear-ghost;
   box-shadow: $regular-shadow;
   padding-top: $regular-margin;
+  position: relative;
+  overflow-y: scroll;
+
+  .meetings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: $regular-gap;
+  }
 }
