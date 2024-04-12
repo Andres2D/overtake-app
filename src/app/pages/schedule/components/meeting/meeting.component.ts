@@ -1,5 +1,6 @@
 import { CommonModule, DatePipe } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { Meeting } from '../../../../../interfaces/meeting.interface';
 import { meetingsMock } from '../../../../../mock';
 import { meetingsMap } from '../../../../../constants/meeting.constants';
@@ -18,9 +19,11 @@ export class MeetingComponent {
   @Input() meeting: Meeting = meetingsMock[0];
   @Output() clickTrack: EventEmitter<number> = new EventEmitter();
 
-  getTrackById(id: number): string | null {
+  constructor(private domSanitizer: DomSanitizer) {}
+
+  getTrackById(id: number): SafeUrl | null {
     return meetingsMap[id] 
-      ? meetingsMap[id].track
+      ? this.domSanitizer.bypassSecurityTrustUrl(meetingsMap[id].track)
       : null;
   }
 
