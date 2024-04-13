@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { ScheduleComponent } from './pages/schedule/schedule.component';
-import { MeetingComponent } from './pages/meeting/meeting.component';
+import { MeetingPageComponent } from './pages/meeting/meeting-page.component';
 
 export const routes: Routes = [
   {
@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path: 'meeting/:id',
-    component: MeetingComponent
+    component: MeetingPageComponent
   },
   {
     path: '**',
