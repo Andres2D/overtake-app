@@ -1,11 +1,9 @@
-<main class="schedule">
-  <h1>Schedule 2024</h1>
-  <section class="meetings">
+<h1>Schedule 2024</h1>
+<section class="meetings">
   <ng-container *ngFor="let meeting of meetingsMock">
     <app-meeting 
       [meeting]="meeting"
       (clickTrack)="goToMeeting($event)"
     />
   </ng-container>
-  </section>
-</main>
+</section>
