@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { MeetingDetail } from '../../../../../interfaces';
 import { detailMock } from '../../../../../mock';
 import { driverMap } from '../../../../../constants';
@@ -15,6 +16,8 @@ import { driverMap } from '../../../../../constants';
 })
 export class RaceLineComponent {
   @Input() detail: MeetingDetail = detailMock;
+
+  constructor(private domSanitizer: DomSanitizer) {}
 
   get intervalPosition() {
     const space = this.detail.progress < 50 ? '10%' : '70%';
@@ -33,5 +36,9 @@ export class RaceLineComponent {
 
   get raceLineBackgroundColor() {
     return this.detail.car_color;
+  }
+
+  get carUrl(): SafeUrl {
+    return this.domSanitizer.bypassSecurityTrustUrl(this.detail.car)
   }
 }

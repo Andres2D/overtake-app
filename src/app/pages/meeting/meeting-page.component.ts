@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { NgFor, DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { RaceLineComponent } from './components/race-line/race-line.component';
 import { MeetingDetail } from '../../../interfaces';
 import { positionsMock, driversMock, intervalsMock } from '../../../mock';
 import { driverMap, meetingsMap } from '../../../constants';
-import { jeddah } from '../../../assets/svg';
 import { meetingsMock } from '../../../mock';
 
 @Component({
@@ -26,7 +26,7 @@ export class MeetingPageComponent {
       .filter(driver => driver.driver_number === detail.driver_number)[0].name_acronym;
     const { interval } = intervalsMock
       .filter(interval => interval.driver_number === detail.driver_number)[0];
-    const { car, teamColor} = driverMap[driverName];
+    const { car, teamColor } = driverMap[driverName];
 
     return {
       driver_name: driverName,
@@ -37,19 +37,22 @@ export class MeetingPageComponent {
     }
   });
 
-  trackPreview: string = jeddah;
+  trackPreview: SafeUrl = '';
   trackName: string = '';
   trackLocation: string = '';
   raceDate: string = '';
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(
+    private activatedRoute: ActivatedRoute, 
+    private domSanitizer: DomSanitizer
+  ) {
     this.activatedRoute.params.subscribe(({id}) => {
       const { 
         meeting_official_name,
         date_start
        } = meetingsMock
         .filter(meeting => meeting.circuit_key === +id)[0];
-      this.trackPreview = meetingsMap[id].track;
+      this.trackPreview = this.domSanitizer.bypassSecurityTrustUrl(meetingsMap[id].track);
       this.trackName = meeting_official_name
       this.trackLocation = meetingsMap[id].flag;
       this.raceDate = date_start;
