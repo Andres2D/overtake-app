@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { Router } from '@angular/router';
 import { MeetingComponent } from './components/meeting/meeting.component';
 import { meetingsMock } from '../../../mock/meeting.mock';
 
@@ -16,7 +17,9 @@ import { meetingsMock } from '../../../mock/meeting.mock';
 export class ScheduleComponent {
   readonly meetingsMock = meetingsMock;
 
+  constructor(private router: Router) {}
+
   goToMeeting(meetingId: number): void {
-    console.log(meetingId);
+    this.router.navigateByUrl(`/meeting/${meetingId}`);
   }
 }
