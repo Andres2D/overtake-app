@@ -19,3 +19,19 @@ export interface MeetingMap {
     flag: string;
   }
 }
+
+export interface DriverMap {
+  [key: string]: {
+    car: string;
+    intervalColor: string;
+    teamColor: string;
+  }
+}
+
+export interface MeetingDetail {
+  driver_name: string;
+  progress: number;
+  interval: string | null;
+  car: string;
+  car_color: string;
+}

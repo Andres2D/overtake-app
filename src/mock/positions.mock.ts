@@ -78,7 +78,7 @@ export const positionsMock: Position[] = [
   },
   {
     position: 16,
-    driver_number: 39,
+    driver_number: 3,
     meeting_key: 1217,
   },
   {

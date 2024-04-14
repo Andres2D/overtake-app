@@ -1,4 +1,9 @@
-import { Meeting, MeetingMap } from './meeting.interface';
+import { 
+  Meeting, 
+  MeetingMap, 
+  MeetingDetail,
+  DriverMap 
+} from './meeting.interface';
 import { Position } from './positions.interface';
 import { Interval } from './intervals.interface';
 import { Driver } from './drivers.interface';
@@ -8,5 +13,7 @@ export {
   MeetingMap,
   Position,
   Interval,
-  Driver
+  Driver,
+  MeetingDetail,
+  DriverMap
 }

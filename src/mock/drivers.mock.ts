@@ -1,4 +1,4 @@
-import { Driver } from "../interfaces";
+import { Driver } from '../interfaces';
 
 export const driversMock: Driver[] = [
   {
@@ -300,4 +300,18 @@ export const driversMock: Driver[] = [
     session_key: 9173,
     meeting_key: 1220,
   },
+  {
+    driver_number: 3,
+    broadcast_name: 'D RICCIARDO',
+    full_name: 'Daniel RICCIARDO',
+    name_acronym: 'RIC',
+    team_name: 'AlphaTauri',
+    team_colour: '5E8FAA',
+    first_name: 'Daniel',
+    last_name: 'Ricciardo',
+    country_code: 'AUS',
+    session_key: 9127,
+    meeting_key: 1215,
+    headshot_url: null,
+  }
 ];

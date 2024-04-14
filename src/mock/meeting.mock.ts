@@ -1,4 +1,5 @@
-import { Meeting } from '../interfaces/meeting.interface';
+import { ferrari } from '../assets/svg';
+import { Meeting, MeetingDetail } from '../interfaces';
 
 export const meetingsMock: Meeting[] = [
   {
@@ -291,3 +292,11 @@ export const meetingsMock: Meeting[] = [
     year: 2023,
   },
 ];
+
+export const detailMock: MeetingDetail = {
+  driver_name: 'LEC',
+  interval: '1.29.02',
+  car: ferrari,
+  car_color: '#EF1A2D',
+  progress: 60
+};
