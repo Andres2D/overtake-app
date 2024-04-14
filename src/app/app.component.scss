@@ -1,4 +1,6 @@
 @import '../styles/sizes';
+@import '../styles/colors';
+@import '../styles/others';
 
 .main {
   max-width: $max-content;
@@ -11,4 +13,16 @@
     width: $logo;
     margin: $regular-margin auto;
   }
+
+  .wrapper {
+    border-radius: $regular-radius;
+    height: $complete-height;
+    max-height: $section-max-height;
+    text-align: center;
+    background-color: $clear-ghost;
+    box-shadow: $regular-shadow;
+    padding-top: $regular-margin;
+    position: relative;
+    overflow-y: scroll;
+  }  
 }

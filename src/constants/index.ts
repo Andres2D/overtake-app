@@ -1,5 +1,6 @@
-import { meetingsMap } from './meeting.constants';
+import { meetingsMap, driverMap } from './meeting.constants';
 
 export {
-  meetingsMap
+  meetingsMap,
+  driverMap
 };

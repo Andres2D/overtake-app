@@ -34,6 +34,6 @@ export class MeetingComponent {
   }
 
   onClickTrack(): void {
-    this.clickTrack.emit(this.meeting.meeting_key);
+    this.clickTrack.emit(this.meeting.circuit_key);
   }
 }

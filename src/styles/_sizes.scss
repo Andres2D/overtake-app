@@ -1,7 +1,10 @@
 $none: 0;
+$minimal: 1px;
+$regular-border: 4px;
 $small-padding: 5px;
 $regular-radius: 8px;
 $regular-margin: 10px;
+$regular-height: 18px;
 $regular-gap: 20px;
 $medium-padding: 25px;
 $top-space: 40px;
@@ -10,9 +13,14 @@ $full-width: 100px;
 $logo: 150px;
 $meeting-card-height: 160px; 
 $meeting-card-width: 175px; 
+$big-width: 200px;
 $max-content: 700px;
 $section-max-height: 800px;
 
+$half: 50%;
+$regular-content: 70%;
+$big-gap: 80%;
 $main: 95%;
+$full: 100%;
 
 $complete-height: 80vh;

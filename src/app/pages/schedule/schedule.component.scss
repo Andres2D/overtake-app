@@ -1,22 +1,8 @@
-@import '../../../styles/colors';
 @import '../../../styles/sizes';
-@import '../../../styles/others';
 
-.schedule {
-  border-radius: $regular-radius;
-  height: $complete-height;
-  max-height: $section-max-height;
-  text-align: center;
-  background-color: $clear-ghost;
-  box-shadow: $regular-shadow;
-  padding-top: $regular-margin;
-  position: relative;
-  overflow-y: scroll;
-
-  .meetings {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: $regular-gap;
-  }
+.meetings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: $regular-gap;
 }

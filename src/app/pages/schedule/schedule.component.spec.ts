@@ -1,9 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { jest } from '@jest/globals';
+import { Router } from '@angular/router';
 
 import { ScheduleComponent } from './schedule.component';
 import { meetingsMock } from '../../../mock/meeting.mock';
+
+const navigationMock = {
+  navigateByUrl: jest.fn()
+}
 
 describe('ScheduleComponent', () => {
   let component: ScheduleComponent;
@@ -11,7 +16,13 @@ describe('ScheduleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ScheduleComponent]
+      imports: [ScheduleComponent],
+      providers: [
+        {
+          provide: Router,
+          useValue: navigationMock
+        }
+      ]
     })
     .compileComponents();
     
@@ -39,5 +50,6 @@ describe('ScheduleComponent', () => {
     const meetingsElements = fixture.debugElement.queryAll(By.css('app-meeting'));
     meetingsElements[0].triggerEventHandler('clickTrack', meetingsMock[0].meeting_key);
     expect(clickSpy).toHaveBeenCalledWith(meetingsMock[0].meeting_key);
+    expect(navigationMock.navigateByUrl).toHaveBeenCalledWith(`/meeting/${meetingsMock[0].meeting_key}`);
   });
 });

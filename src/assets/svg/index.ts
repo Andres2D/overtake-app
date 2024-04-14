@@ -25,6 +25,17 @@ import spa from './tracks/spa.svg';
 import susuka from './tracks/susuka.svg';
 import vegas from './tracks/vegas.svg';
 
+import ferrari from './cars/ferrari.svg';
+import alfaromeo from './cars/alfaromeo.svg';
+import alphatauri from './cars/alphatauri.svg';
+import alpine from './cars/alpine.svg';
+import astonmartin from './cars/astonmartin.svg';
+import haas from './cars/haas.svg';
+import mclaren from './cars/mclaren.svg';
+import mercedez from './cars/mercedez.svg';
+import redbull from './cars/redbull.svg';
+import williams from './cars/williams.svg';
+
 export {
   appLogo,
   abudhabi,
@@ -50,5 +61,15 @@ export {
   singapore,
   spa,
   susuka,
-  vegas
+  vegas,
+  ferrari,
+  alfaromeo,
+  alphatauri,
+  alpine,
+  astonmartin,
+  haas,
+  mclaren,
+  mercedez,
+  redbull,
+  williams
 };

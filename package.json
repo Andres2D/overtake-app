@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "ng lint",
     "prepare": "husky",
-    "test:watch": "npm test -- schedule.component.spec.ts --watch"
+    "test:watch": "npm test -- meeting-page.component.spec.ts --watch"
   },
   "private": true,
   "dependencies": {

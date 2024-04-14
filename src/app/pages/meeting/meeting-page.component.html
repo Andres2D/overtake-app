@@ -1,0 +1,29 @@
+<section class="meeting">
+  <header class="header">
+    <img 
+      class="track"
+      [src]="trackPreview" 
+      [alt]="trackName" 
+    />
+    <h2 class="trackName">{{ trackName }} {{ trackLocation }}</h2>
+    <div class="progress">
+      100%
+    </div>
+  </header>
+  <div class="description">
+    <p class="date">{{ raceDate | date: 'MMM d'}}</p>
+    <span class="status">Completed</span>
+    <p class="laps">60 Laps</p>
+  </div>
+  <div class="simulation">
+    <ul class="position">
+      <ng-container *ngFor="let driver of meetingDetailList">
+        <app-race-line [detail]="driver" />
+      </ng-container>
+    </ul>
+    <img 
+      src="../../../assets/finish-line.png" 
+      alt="finish line"
+    />
+  </div>
+</section>
