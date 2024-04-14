@@ -1,0 +1,70 @@
+@import '../../../styles/colors';
+@import '../../../styles/sizes';
+
+.meeting {
+  margin-top: $regular-gap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    width: $regular-content;
+    margin: $none auto;
+
+    .track {
+      width: $big-width;
+    }
+
+    .trackName {
+      font-size: $regular-gap;
+      grid-row: 2 / 3;
+    }
+
+    .progress {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      border: $regular-border solid $black;
+      padding: 35px 13px;
+      border-radius: $half;
+      font-size: $top-space;
+      font-weight: lighter;
+      width: $full-width;
+      height: 52px;
+    }
+  }
+
+  .description {
+    display: flex;
+    align-items: center;
+    gap: $regular-gap;
+    font-size: $medium-padding;
+    
+    .status {
+      background-color: $success;
+      padding: $regular-border;
+      border-radius: $regular-radius;
+      color: $white;
+    }
+  }
+
+  .simulation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $regular-gap;
+    width: $big-gap;
+    overflow-y: scroll;
+    
+    .position {
+      list-style: none;
+      width: $full;
+      display: flex;
+      flex-direction: column;
+      gap: $regular-margin;
+    }
+  }
+}
