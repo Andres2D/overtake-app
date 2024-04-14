@@ -6,6 +6,10 @@ import { Router } from '@angular/router';
 import { ScheduleComponent } from './schedule.component';
 import { meetingsMock } from '../../../mock/meeting.mock';
 
+const navigationMock = {
+  navigateByUrl: jest.fn()
+}
+
 describe('ScheduleComponent', () => {
   let component: ScheduleComponent;
   let fixture: ComponentFixture<ScheduleComponent>;
@@ -16,9 +20,7 @@ describe('ScheduleComponent', () => {
       providers: [
         {
           provide: Router,
-          useValue: {
-            navigateByUrl: jest.fn()
-          }
+          useValue: navigationMock
         }
       ]
     })
@@ -48,5 +50,6 @@ describe('ScheduleComponent', () => {
     const meetingsElements = fixture.debugElement.queryAll(By.css('app-meeting'));
     meetingsElements[0].triggerEventHandler('clickTrack', meetingsMock[0].meeting_key);
     expect(clickSpy).toHaveBeenCalledWith(meetingsMock[0].meeting_key);
+    expect(navigationMock.navigateByUrl).toHaveBeenCalledWith(`/meeting/${meetingsMock[0].meeting_key}`);
   });
 });
