@@ -1,0 +1,30 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/sizes';
+
+.line {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .driver {
+    padding: $small-padding;
+    border-radius: $regular-radius;
+    background-color: $black;
+    color: $white;
+    width: $top-space;
+  }
+
+  .progress {
+    min-width: $minimal;
+    height: $regular-height;
+    border-radius: $regular-radius;
+  }
+
+  .interval {
+    position: absolute;
+  }
+
+  .car {
+    width: $full-width;
+  }
+}

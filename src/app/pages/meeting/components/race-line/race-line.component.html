@@ -1,0 +1,19 @@
+<li class="line">
+  <span class="driver">{{ detail.driver_name }}</span>
+  <div 
+    class="progress"
+    [style]="{'width': progressPercentage, 'background': raceLineBackgroundColor}"
+  >
+  </div>
+  <p 
+    class="interval"
+    [style]="{'right': intervalPosition, 'color': intervalColor}"
+  >
+    {{ detail.interval }}
+  </p>
+  <img 
+    class="car"
+    [src]="detail.car" 
+    [alt]="detail.driver_name"
+  />
+</li>
