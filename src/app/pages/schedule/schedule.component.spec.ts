@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { jest } from '@jest/globals';
+import { Router } from '@angular/router';
 
 import { ScheduleComponent } from './schedule.component';
 import { meetingsMock } from '../../../mock/meeting.mock';
@@ -11,7 +12,15 @@ describe('ScheduleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ScheduleComponent]
+      imports: [ScheduleComponent],
+      providers: [
+        {
+          provide: Router,
+          useValue: {
+            navigateByUrl: jest.fn()
+          }
+        }
+      ]
     })
     .compileComponents();
     

@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 import { MeetingPageComponent } from './meeting-page.component';
 
@@ -8,7 +10,17 @@ describe('MeetingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MeetingPageComponent]
+      imports: [ MeetingPageComponent ],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            params: of({
+              id: 10
+            })
+          }
+        }
+      ]
     })
     .compileComponents();
     

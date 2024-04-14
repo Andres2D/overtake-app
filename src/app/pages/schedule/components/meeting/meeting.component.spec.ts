@@ -55,7 +55,7 @@ describe('MeetingComponent', () => {
     const emitSpy = jest.spyOn(component.clickTrack, 'emit');
     const containerElement = fixture.debugElement.query(By.css('.meeting'));
     containerElement.triggerEventHandler('click', {});
-    expect(emitSpy).toHaveBeenCalledWith(meetingMock.meeting_key);
+    expect(emitSpy).toHaveBeenCalledWith(meetingMock.circuit_key);
   });
 
   it('should display default information on wrong input', () => {
